@@ -10,7 +10,7 @@ streamlit.dataframe(my_data_row)
 
 #streamlit.text("Hello from Snowflake:")
 streamlit.text("The fruit load list contains:")
-streamlit.text(my_data_row)
+streamlit.text(my_data_rows)
 
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('Breakfast Menu')
