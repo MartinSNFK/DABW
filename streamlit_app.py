@@ -1,20 +1,11 @@
 import streamlit
 import snowflake.connector
 
-my_cur.execute("insert into fruit_load_list values (from streamlit')")
-my_cur.execute("SELECT * from fruit_load_list")
-streamlit.header('The fruit load list contains:')
-my_data_rows = my_cur.fetchall()
-streamlit.dataframe(my_data_rows)
-
-# streamlit.text("The fruit load list contains:")
-
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 streamlit.text('Omega 3 with blueberry oatmeal')
 streamlit.text('Kale, spinach and rocket Smoothie')
 streamlit.text('Hard boiled free range egg')
-
 
 import pandas
 
@@ -34,7 +25,7 @@ fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
 #comment2
 streamlit.dataframe(fruityvice_normalized)
 
-#streamlit.text(fruityvice_response.json())
+streamlit.text(fruityvice_response.json())
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
